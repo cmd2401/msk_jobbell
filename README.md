@@ -1,7 +1,4 @@
-With this script you can simply press E at a certain point and play it ingame as a kind of bell.
-This triggers a job and it receives a notification
-
-
+At positions you specify, players can ring at the "reception" and the specified job will receive a notification that someone has rung the bell.
 
 # Preview: https://streamable.com/1ven6x
 # Discord: https://discord.gg/xX8cdtbgeg
