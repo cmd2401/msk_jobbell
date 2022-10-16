@@ -4,4 +4,4 @@ This triggers a job and it receives a notification
 
 
 # Preview: https://streamable.com/1ven6x
-# Discord: dsc.gg/cmdscripts
+# Discord: https://discord.gg/xX8cdtbgeg
