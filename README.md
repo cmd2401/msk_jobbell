@@ -6,5 +6,3 @@ This triggers a job and it receives a notification
 # Preview: https://streamable.com/1ven6x
 # Tebex: https://capdev.tebex.io
 # Discord: dsc.gg/cmdscripts
-
-// server.lua by cap, client & config by cmd //
