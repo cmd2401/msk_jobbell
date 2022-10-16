@@ -18,6 +18,7 @@ Citizen.CreateThread(function()
                 ESX.ShowHelpNotification(Config.ShowHelpNotification)
                 if IsControlJustPressed(1, Config.Control) then
                     TriggerServerEvent("bell:notify", v.job)
+                    Wait(Config.WaitAfterBell)
                 end
             end
         end
