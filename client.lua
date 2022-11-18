@@ -23,6 +23,6 @@ Citizen.CreateThread(function()
             end
         end
 
-        Citizen.Wait(wait)
+        Wait(wait)
     end
 end)
