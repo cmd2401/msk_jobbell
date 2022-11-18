@@ -9,7 +9,7 @@ AddEventHandler("bell:notify", function(job)
     if (not xPlayer) then return end
     for i = 1, #xPlayers, 1 do
         local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
-        if (xPlayer.getJob().name) == job then
+        if (xPlayer.Job().name) == job then
             TriggerClientEvent('esx:showNotification', xPlayers[i], 'Ein Kunde sucht einen Mitarbeiter an der Rezeption')
             TriggerClientEvent('esx:showNotification', source,      'Du hast die klingel aktiviert')
         else
