@@ -2,18 +2,21 @@ ESX = exports['es_extended']:getSharedObject()
 
 RegisterNetEvent("bell:notify")
 AddEventHandler("bell:notify", function(job)
-    local source = source
-    local xPlayer = ESX.GetPlayerFromId(source)
-    local xPlayers = ESX.GetPlayers()
+    local src = source
+    local xPlayer = ESX.GetPlayerFromId(src)
+    local isJob = false
 
-    if (not xPlayer) then return end
-    for i = 1, #xPlayers, 1 do
-        local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
-        if (xPlayer.Job().name) == job then
-            TriggerClientEvent('esx:showNotification', xPlayers[i], 'Ein Kunde sucht einen Mitarbeiter an der Rezeption')
-            TriggerClientEvent('esx:showNotification', source,      'Du hast die klingel aktiviert')
-        else
-            TriggerClientEvent('esx:showNotification', source,      'Es sind keine Mitarbeiter verfügbar')
+    for k, playerId in pairs(GetPlayers()) do
+        local tPlayer = ESX.GetPlayerFromId(playerId)
+
+        if tPlayer.job.name == job then
+            tPlayer.showNotification('Ein Kunde sucht einen Mitarbeiter an der Rezeption')
+            xPlayer.showNotification('Du hast die klingel aktiviert')
+            isJob = true
         end
+    end
+
+    if not isJob then 
+        xPlayer.showNotification('Es sind keine Mitarbeiter verfügbar')
     end
 end)
