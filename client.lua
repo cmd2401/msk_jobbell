@@ -1,6 +1,6 @@
 ESX = exports['es_extended']:getSharedObject()
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while true do
         local wait = 500
     
